@@ -44,4 +44,4 @@ jobs:
           FOLDER: "./public/"
           SERVER_IP: ${{ secrets.HOST }}
           USERNAME: ${{ secrets.USERNAME }}
-          SERVER_DESTINATION: "/www/ppnp.me/"
+          SERVER_DESTINATION: "./www/ppnp.me/"
