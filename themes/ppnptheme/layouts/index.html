@@ -1,0 +1,22 @@
+{{ define "main" }}
+<section class="introduction hero wrapper">
+  <h1 class="introduction__heading">Мы команда со странным названием, которая делает красиво. Мы PPnP.</h1>
+  <h4>
+    <a class="introduction__about-us" href="/members/">
+      Совсем немного о нас
+      <svg class="introduction__arrow">
+        <use xlink:href="/images/icons.svg#arrow-right"></use>
+      </svg>
+    </a>
+  </h4>
+</section>
+
+<main class="home__events-list events-list">
+  {{ range where .Site.Pages "Section" "events" }}
+  {{ if .Params.featured_image }}
+  {{ .Render "summary" }}
+  {{ end }}
+  {{ end }}
+</main>
+
+{{ end }}

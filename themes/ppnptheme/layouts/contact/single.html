@@ -1,0 +1,27 @@
+{{ define "main" }}
+<main class="content">
+    <div class="wrapper content__wrapper">
+        <div class="contact-form">
+            <div>
+                <h1 class="contact-form__heading">{{ .Title }}</h1>
+                <p>{{ .Content | plainify }}</p>
+            </div>
+            <form class="contact-form__form">
+                <input type="text" placeholder="Имя" name="name">
+                <div class="contact-form__columns">
+                    <input type="text" placeholder="E-mail" name="email">
+                    <input type="text" placeholder="Телефон" name="phone">
+                </div>
+                <textarea placeholder="Сообщение" name="message"></textarea>
+                <label class="checkbox">Я согласен с <a href="/agreement">политикой обработки данных</a>
+                    <input type="checkbox" class="checkbox__input" name="agreed">
+                    <span class="checkbox__mark"></span>
+                </label>
+                <button type="submit" class="contact-form__submit">Отправить</button>
+            </form>
+        </div>
+    </div>
+</main>
+
+<script src="/js/form.js"></script>
+{{ end }}

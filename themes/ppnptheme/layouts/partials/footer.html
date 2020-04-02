@@ -1,0 +1,21 @@
+{{ if not .IsHome }}
+<footer class="footer wrapper">
+    <a href="/">
+        <img src="{{ "images/logo.png" | relURL }}" class="footer__logo" alt="PPnP Team logo">
+    </a>
+    <div class="footer__links">
+        <a href="mailto:{{ .Site.Params.email }}" class="footer__link">
+            <svg class="footer__icon">
+                <use xlink:href="/images/icons.svg#email"></use>
+            </svg>
+        </a>
+        <a href="tel:{{ replaceRE "\\D" "" .Site.Params.phone }}" class="footer__link">
+            <svg class="footer__icon">
+                <use xlink:href="/images/icons.svg#phone"></use>
+            </svg>
+        </a>
+    </div>
+</footer>
+{{ end }}
+<script src="/js/show_menu.js"></script>
+<script src="/js/anchors.js"></script>

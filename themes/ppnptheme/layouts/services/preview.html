@@ -1,0 +1,11 @@
+{{ if .Params.featured_image }}
+{{ $image := .Resources.GetMatch (.Params.featured_image) }}
+{{ if $image }}
+<a class="preview default-link" href="#{{ anchorize .Title }}">
+    <div class="preview__photo-container">
+        {{ replace (readFile $image.RelPermalink) "<svg" "<svg class='preview__photo preview__photo_icon'" | safeHTML}}
+    </div>
+    <p class="preview__text"><strong>{{ .Title }}</strong></p>
+</a>
+{{ end }}
+{{ end }}

@@ -1,0 +1,21 @@
+{{ define "main" }}
+<section class="wrapper hero events__hero">
+    {{ if .Params.featured_image }}
+    {{ $image := .Resources.GetMatch (.Params.featured_image) }}
+    {{ if $image }}
+    <img src="{{ ($image.Resize "1000x").RelPermalink }}" class="events__photo" alt="{{ .Title }} photo">
+    {{ end }}
+    {{ end }}
+    <div>
+        <p>{{ .Date.Format .Site.Params.dateFormat }}</p>
+        <h1 class="hero__title">{{ .Title }}</h1>
+        <p>{{ .Params.description }}</p>
+    </div>
+</section>
+<main class="content">
+    <div class="wrapper content__wrapper">
+        {{ .Content }}
+
+    </div>
+</main>
+{{ end }}

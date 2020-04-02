@@ -1,0 +1,16 @@
+{{ if .Params.photo }}
+{{ $image := .Resources.GetMatch (.Params.photo) }}
+{{ if $image }}
+<article class="list-entry" id="{{ anchorize .Data.Term }}">
+    <img class="list-entry__photo" src="{{ ($image.Resize "600x").RelPermalink }}" alt="{{ .Params.name }}">
+    <div class="list-entry__info">
+        <h3 class="list-entry__name">{{ .Params.name }}</h3>
+        <p class="list-entry__keyinfo">
+            {{ .Params.role }}<br>
+            {{ .Params.uni }}
+        </p>
+        <div>{{ .Content }}</div>
+    </div>
+</article>
+{{ end }}
+{{ end }}

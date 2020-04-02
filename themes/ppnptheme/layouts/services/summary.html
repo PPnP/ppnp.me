@@ -1,0 +1,13 @@
+<article class="list-entry list-entry_small" id="{{ anchorize .Title }}">
+    {{ if .Params.featured_image }}
+    {{ $image := .Resources.GetMatch (.Params.featured_image) }}
+    {{ if $image }}
+    <object type="image/svg+xml" data="{{ $image.RelPermalink }}"
+        class="list-entry__photo list-entry__photo_small"></object>
+    {{ end }}
+    {{ end }}
+    <div class="list-entry__info">
+        <h3 class="list-entry__name">{{ .Title }}</h3>
+        <div>{{ .Content }}</div>
+    </div>
+</article>

@@ -1,0 +1,33 @@
+<p>
+    <!-- Показывает услуги участника команды -->
+
+    Делает&nbsp;
+    {{- $taxonomy := "services" -}}
+    {{- with .Page.Param $taxonomy -}}
+    {{- $total_services := len ($tag := .) -}}
+    {{- range $index, $tag := . -}}
+    {{- with $.Site.GetPage (printf "/%s/%s" $taxonomy $tag) -}}
+    <a href="/services/#{{ (replace .Title "/" "") | urlize }}">{{ .Title }}</a>
+    {{- if lt (add $index 1) $total_services -}}
+    ,&nbsp;
+    {{- end -}}
+    {{- end -}}
+    {{- end -}}
+    {{- end -}}
+    .
+
+    <br>
+
+    <!-- Показывает события, в которых участвовал человек -->
+
+    Участвовал в&nbsp;
+    {{- $member := .Page.Data.Term -}}
+    {{- $events := where (where .Site.Pages ".Params.members" "intersect" (slice $member)) "Section" "events" -}}
+    {{- range $index, $event := $events -}}
+    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    {{- if lt (add $index 1) (len $events) -}}
+    ,&nbsp;
+    {{- end -}}
+    {{- end -}}
+    .
+</p>

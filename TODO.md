@@ -1,0 +1,4 @@
+- [ ] Remove unused css
+- [ ] Highlight container after anchor link was pressed
+- [ ] Add error handling in Hugo (missing arguments, invalid arguments, etc.)
+- [ ] Check if date and folder coincide (in tests)

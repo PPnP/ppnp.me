@@ -1,0 +1,36 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Deploy to production
+
+on:
+  push:
+    branches: 
+      - master
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  deploy:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: true
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: latest
+
+      - name: Build
+        run: hugo
+      
+      - name: Deploy
+        uses: trendyminds/github-actions-rsync@master
+        with:
+          RSYNC_OPTIONS: -av --delete-before
+          RSYNC_TARGET: www/ppnp.me/
+          RSYNC_SOURCE: public/
+        env:
+          SSH_PRIVATE_KEY: ${{secrets.SSH_PRIVATE_KEY}}
+          SSH_USERNAME: ${{secrets.USERNAME}}
+          SSH_HOSTNAME: ${{secrets.HOST}}

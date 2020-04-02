@@ -1,0 +1,35 @@
+baseURL = "https://ppnp.me/"
+languageCode = "en-us"
+title = "PPnP Team"
+theme = "ppnptheme"
+
+disableKinds = ["RSS"]
+preserveTaxonomyNames = true
+disableHugoGeneratorInject = true
+ignoreFiles = ["README.md", "LICENSE.md", "TODO.md"] # don't render github related pages
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[params]
+    dateFormat = "02.01.2006"
+    phone = "+7 (977) 782-58-49"
+    email = "ppnpteam@gmail.com" # also change in content/contact/handler.php, content/agreement
+
+[taxonomies]
+  members = "members"
+  services = "services"
+
+[menu]
+  [[menu.main]]
+    name = "Услуги"
+    url = "/services/"
+    weight = 1
+  [[menu.main]]
+    name = "О нас"
+    url = "/members/"
+    weight = 2
+  [[menu.main]]
+    name = "Написать письмо"
+    url = "/contact/"
+    weight = 3

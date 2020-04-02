@@ -1,0 +1,40 @@
+{{ $presentation := .Page.Resources.GetMatch "presentation/presentation.pdf" }}
+{{ if $presentation }}
+
+<div class="presentation">
+    <div class="presentation__main">
+        <div class="presentation__button-area presentation__button-area_prev"></div>
+        <div class="presentation__view">
+            <div class="presentation__progress"></div>
+            {{ $folder := printf "content/%s/presentation/" .Page.File.Dir }}
+            {{ range $index, $slide := (readDir $folder) }}
+            {{ if eq (path.Ext .Name) ".jpg" }}
+            <img class="presentation__slide" src="{{ printf "presentation/%s" .Name }}"
+                alt="{{ $.Page.Title }} Presentation Slide {{ add $index 1 }}">
+            {{ end }}
+            {{ end }}
+        </div>
+        <div class="presentation__button-area presentation__button-area_next"></div>
+    </div>
+    <div class="presentation__footer">
+        <div>
+            <button class="presentation__button presentation__button_prev">
+                <svg class="presentation__icon inverted">
+                    <use xlink:href="/images/icons.svg#arrow-right"></use>
+                </svg>
+            </button>
+            <button class="presentation__button presentation__button_next">
+                <svg class="presentation__icon">
+                    <use xlink:href="/images/icons.svg#arrow-right"></use>
+                </svg>
+            </button>
+        </div>
+        <a href="{{ $presentation.RelPermalink }}" download>Скачать</a>
+    </div>
+</div>
+
+<script src="/js/presentation.js"></script>
+
+{{ else }}
+Презентация не найдена.
+{{ end }}

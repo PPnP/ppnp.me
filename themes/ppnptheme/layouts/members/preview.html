@@ -1,0 +1,12 @@
+{{ if .Params.photo }}
+{{ $image := .Resources.GetMatch (.Params.photo) }}
+{{ if $image }}
+<a class="preview members__preview default-link" href="#{{ anchorize .Data.Term }}">
+    <div class="preview__photo-container preview__photo-container_round">
+        <img class="preview__photo" src="{{ ($image.Resize "400x").RelPermalink }}" alt="{{ .Params.name }}">
+    </div>
+    <p class="preview__text"><strong>{{ .Params.name }}</strong></p>
+    <p class="preview__text_secondary">{{ .Params.role }}</p>
+</a>
+{{ end }}
+{{ end }}
