@@ -27,7 +27,7 @@ jobs:
           node-version: '10.x'
       
       - name: Install packages  
-      - run: npm install
+        run: npm install
 
       - name: Build
         run: hugo
