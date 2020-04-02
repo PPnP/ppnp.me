@@ -1,4 +1,4 @@
-# ppnp.me
+# ppnp.me ![](https://github.com/PPnP/ppnp.me/workflows/Deploy%20to%20production/badge.svg)
 
 > Official PPnP team website
 >
