@@ -36,12 +36,12 @@ jobs:
         run: gulp
       
       - name: Deploy
-        uses: trendyminds/github-actions-rsync@master
-        with:
-          RSYNC_OPTIONS: -av --delete-before
-          RSYNC_TARGET: www/ppnp.me/
-          RSYNC_SOURCE: public/
+        uses: AEnterprise/rsync-deploy@v1.0
         env:
-          SSH_PRIVATE_KEY: ${{secrets.SSH_PRIVATE_KEY}}
-          SSH_USERNAME: ${{secrets.USERNAME}}
-          SSH_HOSTNAME: ${{secrets.HOST}}
+          DEPLOY_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          ARGS: "-av --delete-before"
+          SERVER_PORT: ${{ secrets.PORT }}
+          FOLDER: "./public/"
+          SERVER_IP: ${{ secrets.HOST }}
+          USERNAME: ${{ secrets.USERNAME }}
+          SERVER_DESTINATION: "/www/ppnp.me/"
