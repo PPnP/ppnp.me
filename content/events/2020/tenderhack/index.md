@@ -3,14 +3,13 @@ title: TenderHack 2020
 event_type: Хакатон
 date: 2020-01-26
 featured_image: featured.jpg
-description: Хакатонов от Портала поставщиков по улучшению платформы
+description: Хакатонов от Портала поставщиков по улучшению платформы.
 members: [kottsov, krylov, stepanov, kravtsov]
 ---
 
 # Результат
 
 Не победили, но получили полезный опыт работы в государственной сфере  
-
 
 # Кейс
 
