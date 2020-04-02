@@ -4,7 +4,7 @@ name: Deploy to production
 
 on:
   release:
-    types: [published, deleted]
+    types: [published]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -25,7 +25,7 @@ jobs:
         with:
           node-version: '10.x'
       
-      - name: Install packages  
+      - name: Install node packages  
         run: npm install
 
       - name: Build
