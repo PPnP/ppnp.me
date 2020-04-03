@@ -281,13 +281,13 @@ button:focus {
     padding-bottom: 2rem;
     color: #fff;
     opacity: 0;
-    transition: opacity var(--transition-duration) linear;
+    transition: opacity .05s linear;
     pointer-events: none;
 }
 
 .header_expanded .top-menu {
     opacity: 1;
-    transition: opacity var(--transition-duration) linear;
+    transition: opacity .05s linear;
     transition-delay: var(--transition-duration);
     pointer-events: all;
 }
@@ -778,15 +778,15 @@ button:focus {
     }
 
     h1 {
-        font-size: 1.6rem;
-    }
-
-    h2 {
         font-size: 1.5rem;
     }
 
+    h2 {
+        font-size: 1.4rem;
+    }
+
     h3 {
-        font-size: 1.4rem
+        font-size: 1.3rem
     }
 
     h4 {
@@ -826,5 +826,20 @@ button:focus {
 
     .list-entry__photo {
         display: none;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .list-previews {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .preview__photo-container {
+        width: 6rem;
+        height: 6rem
+    }
+
+    .contact-form__columns {
+        grid-template-columns: 1fr;
     }
 }
