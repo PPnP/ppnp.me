@@ -745,7 +745,7 @@ button:focus {
 }
 
 .footer__logo {
-    height: 2.5rem
+    height: 3rem
 }
 
 .footer__links {
@@ -845,7 +845,8 @@ button:focus {
         grid-template-columns: 1fr;
     }
 
-    .header__logo {
+    .header__logo,
+    .footer__logo {
         height: 2.5rem
     }
 
