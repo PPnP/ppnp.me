@@ -464,7 +464,7 @@ button:focus {
 }
 
 .content__wrapper a:not(.default-link):hover {
-    border-bottom-color: inherit
+    border-bottom-color: var(--accent)
 }
 
 /*
