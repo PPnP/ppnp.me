@@ -2,7 +2,7 @@
 name: Матвей Котцов
 photo: avatar.jpg
 role: Frontend
-uni: МГТУ им. Н.Э.Баумана
+uni: МГТУ им. Н. Э. Баумана
 services: [web-apps]
 ---
 
