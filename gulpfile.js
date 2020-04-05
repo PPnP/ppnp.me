@@ -1,11 +1,9 @@
 const { src, dest, parallel, series } = require('gulp');
 
 const htmlmin = require("gulp-htmlmin");
-const validator = require('gulp-html');
 const csso = require("gulp-csso");
 const autoprefixer = require('gulp-autoprefixer');
 const svgmin = require('gulp-svgmin');
-const eslint = require('gulp-eslint');
 const terser = require('gulp-terser');
 const imagemin = require('gulp-imagemin');
 const RevAll = require("gulp-rev-all");
@@ -28,7 +26,6 @@ const html = () => {
             removeScriptTypeAttributes: true,
             useShortDoctype: true
         }))
-        .pipe(validator())
         .pipe(dest('./'))
 }
 
@@ -73,10 +70,7 @@ const svg = () => {
 }
 
 const js = () => {
-    return src(['public/**/*.js', '!public/**/*.min.js'], { base: './' })
-        .pipe(eslint())
-        .pipe(eslint.format())
-        .pipe(eslint.failAfterError())
+    return src('public/**/*.js', { base: './' })
         .pipe(terser())
         .pipe(dest('./'));
 }
