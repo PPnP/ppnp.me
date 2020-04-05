@@ -73,7 +73,7 @@ const svg = () => {
 }
 
 const js = () => {
-    return src('public/**/*.js', { base: './' })
+    return src(['public/**/*.js', '!public/**/*.min.js'], { base: './' })
         .pipe(eslint())
         .pipe(eslint.format())
         .pipe(eslint.failAfterError())
