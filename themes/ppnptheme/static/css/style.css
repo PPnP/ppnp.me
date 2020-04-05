@@ -590,7 +590,9 @@ button:focus {
 }
 
 .contact-form__submit {
-    transition: background, filter var(--transition-duration) linear;
+    transition-property: filter, background-color;
+    transition-duration: var(--transition-duration);
+    transition-timing-function: linear;
 }
 
 .contact-form__submit:hover {
