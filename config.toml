@@ -30,6 +30,10 @@ ignoreFiles = ["README.md", "LICENSE.md", "TODO.md"] # don't render github relat
     url = "/members/"
     weight = 2
   [[menu.main]]
+    name = "Хакатоны"
+    url = "/events/"
+    weight = 3
+  [[menu.main]]
     name = "Написать письмо"
     url = "/contact/"
-    weight = 3
+    weight = 4

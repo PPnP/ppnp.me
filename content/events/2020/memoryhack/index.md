@@ -1,11 +1,15 @@
 ---
-title: TenderHack 2020
+title: Memory.Hack
 event_type: Хакатон
-date: 2020-01-26
+date: 2020-04-04
 featured_image: featured.jpg
-description: Хакатон от Портала поставщиков по улучшению платформы.
-members: [kottsov, krylov, stepanov, kravtsov]
+description: Хакатонов от Портала поставщиков по улучшению платформы.
+members: [kottsov, krylov, stepanov, kravtsov, kozlov]
 ---
+
+# Результат
+
+Не победили, но получили полезный опыт работы в государственной сфере  
 
 # Кейс
 
