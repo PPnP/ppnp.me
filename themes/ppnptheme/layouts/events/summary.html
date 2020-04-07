@@ -2,7 +2,7 @@
 {{ $image := .Resources.GetMatch (.Params.featured_image) }}
 {{ if $image }}
 <article class="event">
-    <a href="{{ .RelPermalink }}" class="event__link"></a>
+    <a href="{{ .RelPermalink }}" class="event__link default-link"></a>
     <img class="event__thumbnail" src="{{ $image.RelPermalink }}" alt="{{ .Title }} event thumbnail">
     <div class="event__info">
         <time class="event__date"
