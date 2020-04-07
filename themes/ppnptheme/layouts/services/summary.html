@@ -1,4 +1,4 @@
-<article class="list-entry list-entry_small" id="{{ anchorize .Title }}">
+<article class="list-entry list-entry_small" id="{{ .Data.Term }}">
     {{ if .Params.featured_image }}
     {{ $image := .Resources.GetMatch (.Params.featured_image) }}
     {{ if $image }}
