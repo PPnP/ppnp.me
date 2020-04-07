@@ -21,6 +21,8 @@
 <script src="/js/show_menu.js"></script>
 <script src="/js/anchors.js"></script>
 <script src="/js/smooth_scroll_pf.min.js"></script>
+
+{{ if not .Site.IsServer }}
 <script>
     (function (e, t, n, i, s, a, c) {
         e[n] = e[n] || function () { (e[n].q = e[n].q || []).push(arguments) }
@@ -31,3 +33,4 @@
     galite('create', 'UA-162764390-1', 'auto');
     galite('send', 'pageview');
 </script>
+{{ end }}
