@@ -1,19 +1,19 @@
 <p>
     <!-- Показывает услуги участника команды -->
 
-    Делает&nbsp;
+    Делает
     {{- $taxonomy := "services" -}}
     {{- with .Page.Param $taxonomy -}}
     {{- $total_services := len ($tag := .) -}}
     {{- range $index, $tag := . -}}
     {{- with $.Site.GetPage (printf "/%s/%s" $taxonomy $tag) -}}
-    <a href="/services/#{{ (replace .Title "/" "") | urlize }}">{{ .Title }}</a>
+    &nbsp;<a href="/services/#{{ (replace .Title "/" "") | urlize }}">{{ .Title }}</a>
     {{- if lt (add $index 1) $total_services -}}
-    ,&nbsp;
+    ,
     {{- end -}}
     {{- end -}}
     {{- end -}}
-    {{- end -}}
+    {{- end -}}.
 
     <br>
 
@@ -27,5 +27,5 @@
     {{- if lt (add $index 1) (len $events) -}}
     ,&nbsp;
     {{- end -}}
-    {{- end -}}
+    {{- end -}}.
 </p>
