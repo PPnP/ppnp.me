@@ -552,7 +552,7 @@ button:focus {
 
 .list-entry {
     display: flex;
-    height: 100%;
+    align-items: flex-start;
 }
 
 .list-entry__info p,
@@ -566,9 +566,6 @@ button:focus {
 
 .list-entry__photo {
     width: 30%;
-    height: 100%;
-    -o-object-fit: cover;
-    object-fit: cover;
     margin-right: 2rem
 }
 
