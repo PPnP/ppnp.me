@@ -4,7 +4,7 @@ event_type: Хакатон
 date: 2019-10-17
 featured_image: featured.jpg
 description: Хакатон Молодежной программы FINOdays от Центрального Банка РФ, проходивший в рамках Форума инновационных финансовых технологий FINOPOLIS 2019
-members: [krylov, kottsov, kravtsov, stepanov]
+members: [krylov, kottsov, kravtsov, denisov]
 ---
 
 # Результат
