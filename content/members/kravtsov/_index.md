@@ -6,16 +6,16 @@ services: [film-making, ui-ux-design]
 ---
 
 <strong class="accent">Обучение</strong>  
-Обучение в РГАТУ им П.А. Соловьева (с 2018)  
+РГАТУ им П.А. Соловьева (с 2018)  
 Программа: «Менеджмент»
 
-Обучение в Художественной школе (2011-2015)  
+Художественная школа (2011-2015)  
 Профиль: «Компьютерный дизайн»
 
-Профессиональное владение программами  
-Design: Sketch, Figma, Illustrator, Photoshop, Principle  
-Photo: Lightroom, Luminar  
-Video: Premiere Pro, Final Cut Pro X, DaVinci Resolve
+Профессиональное владение программами:
+* Design: Sketch, Figma, Illustrator, Photoshop, Principle  
+* Photo: Lightroom, Luminar  
+* Video: Premiere Pro, Final Cut Pro X, DaVinci Resolve
 
 <strong class="accent">Успехи</strong>  
 Создание коммерческих фото и видео (с 2018)
@@ -26,7 +26,7 @@ Cоздание иллюстраций автомобилей, постеров,
 Прототипирование мобильных и web-приложений (с 2014)
 
 Хакатон Hack&Change (2019)  
-Победа, трек DataScience
+Победа, трек Data Science
 
 Хакатон FINOdays (2019)  
 Победа, 1 место

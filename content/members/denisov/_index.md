@@ -24,7 +24,7 @@ Debate Chamber Computer Science Summer School, Лондон (2019)
 
 <strong class="accent">Успехи</strong>  
 Хакатон Hack&Change (2019)  
-Победа, трек DataScience
+Победа, трек Data Science
 
 Хакатон FINOdays (2019)  
 Победа, 1 место
