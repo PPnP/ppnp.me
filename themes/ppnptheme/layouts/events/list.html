@@ -1,0 +1,17 @@
+{{ define "main" }}
+<section class="wrapper hero">
+    <p>{{ .Description }}</p>
+    <h1 class="hero__title hero__title_narrow">{{ .Content | plainify }}</h1>
+</section>
+<main class="content">
+    <div class="wrapper content__wrapper">
+        <h2>{{ .Title }}</h2>
+
+        <div class="list-full">
+            {{ range .Pages }}
+            {{ .Render "summary" }}
+            {{ end }}
+        </div>
+    </div>
+</main>
+{{ end }}
