@@ -63,8 +63,27 @@ a {
     text-decoration: none;
 }
 
-strong {
+em,
+i {
+    font-style: italic
+}
+
+strong,
+b {
     font-weight: 600;
+}
+
+ul {
+    list-style: disc;
+}
+
+ol {
+    list-style: decimal
+}
+
+ul,
+ol {
+    padding-left: 2rem
 }
 
 input,
@@ -448,11 +467,6 @@ button:focus {
     margin: 1.5rem 0 1rem
 }
 
-.content__wrapper>ul {
-    list-style: disc;
-    margin-left: 2rem
-}
-
 .content__wrapper>p,
 .content__wrapper>ul {
     margin-top: 1rem
@@ -541,7 +555,8 @@ button:focus {
     height: 100%;
 }
 
-.list-entry__info p {
+.list-entry__info p,
+.list-entry__info ul {
     margin-top: .75rem
 }
 
