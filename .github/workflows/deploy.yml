@@ -9,16 +9,17 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   deploy:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
         with:
           submodules: true
 
       - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
-        with:
-          hugo-version: latest
+        run: | 
+          wget -O hugo.deb $(curl -s https://api.github.com/repos/gohugoio/hugo/releases/latest | grep -oP '"browser_download_url": "\K(.*)hugo(.*)Linux-64bit.deb')
+          sudo dpkg -i hugo.deb
+          rm hugo.deb   
           
       - name: Setup Node
         uses: actions/setup-node@v1
