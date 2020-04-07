@@ -3,7 +3,7 @@
 
     Услуги:&nbsp;
     {{- range $index, $taxonomy := .Page.Params.services -}}
-    {{- with $.Site.GetPage "taxonomy" (printf "services/%s" $taxonomy) -}}
+    {{- with $.Site.GetPage (printf "services/%s" $taxonomy) -}}
     {{- if gt $index 0 }}, {{ end -}}
     <a href="/services#{{ $taxonomy }}">{{ .Title }}</a>
     {{- end -}}
@@ -15,10 +15,11 @@
 
     Хакатоны с PPnP:&nbsp;
     {{- $member := .Page.Data.Term -}}
-    {{- range $index, $page := (where .Site.Pages "Section" "events") }}
-    {{- if in .Params.members $member -}}
-    {{- if gt $index 0 }}, {{ end -}}
+    {{- $events := where (where .Site.Pages ".Params.members" "intersect" (slice $member)) "Section" "events" -}}
+    {{- range $index, $event := $events -}}
     <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    {{- if lt (add $index 1) (len $events) -}}
+    ,&nbsp;
     {{- end -}}
     {{- end -}}.
 </p>
