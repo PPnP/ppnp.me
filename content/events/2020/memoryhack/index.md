@@ -3,7 +3,7 @@ title: Memory.Hack
 event_type: Хакатон
 date: 2020-04-04
 featured_image: featured.jpg
-description: Хакатонов от Портала поставщиков по улучшению платформы.
+description: Хакатон от Phystech.Genesis и Дороги памяти.
 members: [kottsov, krylov, denisov, kravtsov, kozlov]
 ---
 
