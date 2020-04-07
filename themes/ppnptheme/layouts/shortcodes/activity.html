@@ -1,17 +1,11 @@
 <p>
     <!-- Показывает услуги участника команды -->
 
-    Услуги:
-    {{- $taxonomy := "services" -}}
-    {{- with .Page.Param $taxonomy -}}
-    {{- $total_services := len ($tag := .) -}}
-    {{- range $index, $tag := . -}}
-    {{- with $.Site.GetPage (printf "/%s/%s" $taxonomy $tag) -}}
-    &nbsp;<a href="/services/#{{ (replace .Title "/" "") | urlize }}">{{ .Title }}</a>
-    {{- if lt (add $index 1) $total_services -}}
-    ,
-    {{- end -}}
-    {{- end -}}
+    Услуги:&nbsp;
+    {{- range $index, $taxonomy := .Page.Params.services -}}
+    {{- with $.Site.GetPage "taxonomy" (printf "services/%s" $taxonomy) -}}
+    {{- if gt $index 0 }}, {{ end -}}
+    <a href="/services#{{ $taxonomy }}">{{ .Title }}</a>
     {{- end -}}
     {{- end -}}.
 
@@ -21,11 +15,10 @@
 
     Хакатоны с PPnP:&nbsp;
     {{- $member := .Page.Data.Term -}}
-    {{- $events := where (where .Site.Pages ".Params.members" "intersect" (slice $member)) "Section" "events" -}}
-    {{- range $index, $event := $events -}}
+    {{- range $index, $page := (where .Site.Pages "Section" "events") }}
+    {{- if in .Params.members $member -}}
+    {{- if gt $index 0 }}, {{ end -}}
     <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-    {{- if lt (add $index 1) (len $events) -}}
-    ,&nbsp;
     {{- end -}}
     {{- end -}}.
 </p>
