@@ -5,6 +5,7 @@ date: 2020-04-04
 featured_image: featured.jpg
 description: Хакатонов от Портала поставщиков по улучшению платформы.
 members: [kottsov, krylov, stepanov, kravtsov, kozlov]
+draft: True # для публикации убрать эту строку
 ---
 
 # Результат

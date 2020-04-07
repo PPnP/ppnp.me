@@ -2,11 +2,34 @@
 name: Степан Денисов
 photo: avatar.jpg
 role: Backend
-uni: НИУ ВШЭ
 services: [chat-bots, web-apps]
 ---
 
 <strong class="accent">Об участнике</strong>  
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+Обучение на ФКН НИУ ВШЭ (с 2019)  
+Программа: "Прикладная математика и информатика"
+
+Обучение в Лицее НИУ ВШЭ (2017-2019)  
+Профиль: "Математика и информатика"
+
+Обучение в Московской Школе Программистов в Яндексе (2015-2019)  
+Курсы: С++, дискретная математика, операционные системы, алгоритмы и структуры данных, компьютерные сети, промышленное программирование, BigData, Blockchain, web-разработка, API и чат-боты
+
+Debate Chamber Computer Science Summer School, Лондон (2019)
+
+Летняя Школа по мобильным разработкам ФКН НИУ ВШЭ (2018)  
+Победа в конкурсе проектов
+
+Хакатон Hack&Change (2019)  
+Победа, трек DataScience
+
+Хакатон FINOdays (2019)  
+Победа, 1 место
+
+Защита проекта «Разработка Learning Management System в формате чат-бота для Лицея НИУ ВШЭ» (2018)
+
+Считаю важным в жизни уметь разносторонне развиваться и сменять свою деятельность, ведь это самый лучший полезный отдых!  
+Помимо программирования, занимаюсь спортом: играю в хоккей, хожу в спортзал, бегаю. Люблю походы и путешествия. Как хобби занимаюсь дизайном презентаций — здесь я могу проявить свой креатив. В свободное время играю на гитаре. 
+Как основную сферу профессиональной деятельности выбрал разработку backend и чат-ботов
 
 {{< activity >}}

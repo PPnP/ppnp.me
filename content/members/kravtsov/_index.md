@@ -2,11 +2,38 @@
 name: Леонид Кравцов
 photo: avatar.jpg
 role: Design
-uni: РГАТУ
 services: [film-making, ui-ux-design]
 ---
 
 <strong class="accent">Об участнике</strong>  
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+Обучение в РГАТУ им П.А. Соловьева (с 2018)  
+Программа: "Менеджмент"
+
+Обучение в Художественной школе (2011-2015)  
+Профиль: "Компьютерный дизайн"
+
+Профессиональное владение программами  
+Design: Sketch, Figma, Illustrator, Photoshop, Principle  
+Photo: Lightroom, Luminar  
+Video: Premiere Pro, Final Cut Pro X, DaVinci Resolve
+
+Создание коммерческих фото и видео (с 2018)
+
+Проект @kravtsov_design (с 2016)  
+Cоздание иллюстраций автомобилей, постеров, макетов для футболок, кубков, дизайн гоночных автомобилей и прочее
+ 
+Прототипирование мобильных и web-приложений (с 2014)
+
+Хакатон Hack&Change (2019)  
+Победа, трек DataScience
+
+Хакатон FINOdays (2019)  
+Победа, 1 место
+
+Чемпионат VK Cup (2019)  
+Финалист трека Design
+
+Если я вижу что-то красивое, то не могу пройти мимо, не сфотографировав. Дизайн, фото, видео – это частицы моей души, я просто не могу без них. Они всегда существовали где-то внутри меня и дальше будут только развиваться. В совокупности они дают целостный взгляд.  
+На хакатонах я отвечаю за дизайн: от презентации проекта до прототипирования приложения. 
 
 {{< activity >}}

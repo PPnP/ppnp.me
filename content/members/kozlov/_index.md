@@ -2,11 +2,32 @@
 name: Денис Козлов
 photo: avatar.jpg
 role: Data Science
-uni: НИУ ВШЭ
 services: [data-science]
 ---
 
 <strong class="accent">Об участнике</strong>  
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+Обучение на ФКН НИУ ВШЭ (с 2019)  
+Программа: "Прикладная математика и информатика", углубленный курс по программированию
+
+Обучение в Лицее Информационных Технологий 1533 (2014 – 2019)  
+Профиль: "Программирование"
+
+Летняя школа программирования «GoTo Camp» (2018, 2019)  
+Направление: «Анализ данных и машинное обучение»
+
+Хакатон Moscow Travel Hack (2020)
+Победа, трек Улучшение пользовательского опыта в сервисе «МегаФон Путешествия»
+
+Хакатон Hack&Change (2019)  
+Победа, трек DataScience
+
+Победа в олимпиадах по информатике: «Ломоносов» и «Открытая олимпиада школьников» (2019)  
+
+Разработка чат-бота ВК и съёмка обучающих видео для магазина головоломок (2019)
+
+Защита проекта «Итерационное моделирование развития городов на основе клеточных автоматов и генетических алгоритмов» (2018)
+
+В команде занимаюсь анализом данных и backend-разработкой. Имел дело с чат-ботами, Google API. Вне хакатонов экспериментирую с программируемым дизайном.  
+А ещё я собираю головоломки на время (действительно быстро), участвую в чемпионатах по спидкубингу и снимаю несерьезные ролики
 
 {{< activity >}}

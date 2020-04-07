@@ -1,7 +1,7 @@
 <p>
     <!-- Показывает услуги участника команды -->
 
-    Делает&nbsp;
+    Делает:&nbsp;
     {{- $taxonomy := "services" -}}
     {{- with .Page.Param $taxonomy -}}
     {{- $total_services := len ($tag := .) -}}
@@ -14,13 +14,12 @@
     {{- end -}}
     {{- end -}}
     {{- end -}}
-    .
 
     <br>
 
     <!-- Показывает события, в которых участвовал человек -->
 
-    Участвовал в&nbsp;
+    Хакатоны с PPnP:&nbsp;
     {{- $member := .Page.Data.Term -}}
     {{- $events := where (where .Site.Pages ".Params.members" "intersect" (slice $member)) "Section" "events" -}}
     {{- range $index, $event := $events -}}
@@ -29,5 +28,4 @@
     ,&nbsp;
     {{- end -}}
     {{- end -}}
-    .
 </p>
