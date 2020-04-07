@@ -506,7 +506,6 @@ button:focus {
 .preview__photo-container {
     width: calc((var(--width) - 10rem) / 5);
     height: calc((var(--width) - 10rem) / 5);
-    /* this shit is ugly */
     overflow: hidden;
     transition: transform var(--transition-duration) linear;
 }
@@ -788,6 +787,13 @@ button:focus {
     Media queries
 */
 
+@media screen and (max-width: 1070px) {
+    .preview__photo-container {
+        width: calc((var(--max-width) - 10rem) / 5);
+        height: calc((var(--max-width) - 10rem) / 5);
+    }
+}
+
 @media screen and (max-width: 800px) {
     html {
         font-size: 16px
@@ -814,16 +820,6 @@ button:focus {
         grid-gap: 2rem
     }
 
-    .list-previews {
-        grid-gap: 1.5rem;
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .preview__photo-container {
-        width: 6rem;
-        height: 6rem
-    }
-
     .hero__title,
     .introduction__heading {
         max-width: 100%;
@@ -845,18 +841,19 @@ button:focus {
     }
 }
 
-@media screen and (max-width: 450px) {
-    .list-previews {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
+@media screen and (max-width: 545px) {
     .preview__photo-container {
-        width: 6rem;
-        height: 6rem
+        width: 5rem;
+        height: 5rem
     }
 
     .contact-form__columns {
         grid-template-columns: 1fr;
+    }
+
+    .list-previews {
+        grid-gap: 1.5rem;
+        grid-template-columns: repeat(3, 1fr);
     }
 
     .header__logo,
