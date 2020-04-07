@@ -1,5 +1,5 @@
 ---
-title: Chat Bots
+title: Чат-боты
 featured_image: featured.svg
 ---
 

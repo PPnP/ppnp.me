@@ -1,5 +1,5 @@
 ---
-title: Web Apps
+title: Веб-приложения
 featured_image: featured.svg
 weight: 1
 ---

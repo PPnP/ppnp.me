@@ -1,5 +1,5 @@
 ---
-title: SMM and Targeting
+title: SMM и Targeting
 featured_image: featured.svg
 ---
 
