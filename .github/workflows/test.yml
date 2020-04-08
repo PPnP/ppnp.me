@@ -1,0 +1,30 @@
+name: Deploy
+
+on:
+  release:
+    types: [prereleased]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: true
+
+      - name: Setup Hugo
+        run: | 
+          wget -O hugo.deb $(curl -s https://api.github.com/repos/gohugoio/hugo/releases/latest | grep -oP '"browser_download_url": "\K(.*)hugo(.*)Linux-64bit.deb')
+          sudo dpkg -i hugo.deb
+          rm hugo.deb   
+          
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: '10.x'
+      
+      - name: Install node packages  
+        run: npm install
+
+      - name: Test
+        run: npm run test
