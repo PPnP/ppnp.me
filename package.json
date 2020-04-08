@@ -1,10 +1,9 @@
 {
   "name": "ppnp.me",
   "version": "1.0.0",
-  "description": "> Official PPnP team website > > [![](https://img.shields.io/badge/backend-Stepan%20Denisov-lightblue)](https://vk.com/sd.denisoff 'VK profile') > [![](https://img.shields.io/badge/frontend-Matvey%20Kottsov-orange)](https://vk.com/kottsovcom 'VK profile') > [![](https://img.shields.io/badge/DS%26ML-Денис%20Козлов-blue)](https://vk.com/dkozl 'VK profile') > [![](https://img.shields.io/badge/UX%2FUI-Leonid%20Kravtsov-green)](https://vk.com/kravtsovjr 'VK profile') > [![](https://img.shields.io/badge/PM%26BA-Pavel%20Krylov-lightgrey)](https://vk.com/pkryloff 'VK profile')",
-  "main": "index.js",
-  "dependencies": {},
-  "devDependencies": {
+  "description": "> Official PPnP team website > > [![](https://img.shields.io/badge/backend-Stepan%20Denisov-lightblue)](https://vk.com/sd.denisoff 'VK profile') > [![](https://img.shields.io/badge/frontend-Matvey%20Kottsov-orange)](https://vk.com/kottsovcom 'VK profile') > [![](https://img.shields.io/badge/DS%26ML-Denis%20Kozlov-blue)](https://vk.com/dkozl 'VK profile') > [![](https://img.shields.io/badge/UX%2FUI-Leonid%20Kravtsov-green)](https://vk.com/kravtsovjr 'VK profile') > [![](https://img.shields.io/badge/PM%26BA-Pavel%20Krylov-lightgrey)](https://vk.com/pkryloff 'VK profile')",
+  "main": "gulpfile.js",
+  "dependencies": {
     "eslint-config-airbnb": "^18.1.0",
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
@@ -21,11 +20,9 @@
     "gulp-rev-delete-original": "^0.2.3",
     "gulp-svgmin": "^2.2.0",
     "gulp-terser": "^1.2.0",
-    "gulp-util": "^3.0.8",
-    "gulp-w3c-html-validator": "^2.0.0",
-    "path": "^0.12.7",
-    "simplecrawler": "^1.1.8"
+    "path": "^0.12.7"
   },
+  "devDependencies": {},
   "scripts": {
     "test": "rm -rf public && hugo && gulp test",
     "build": "rm -rf public && hugo && gulp"
