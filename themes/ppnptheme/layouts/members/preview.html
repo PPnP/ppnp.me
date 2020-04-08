@@ -1,7 +1,7 @@
 {{ if .Params.photo }}
 {{ $image := .Resources.GetMatch (.Params.photo) }}
 {{ if $image }}
-<a class="preview members__preview default-link" href="#{{ anchorize .Data.Term }}">
+<a class="preview default-link" href="#{{ anchorize .Data.Term }}">
     <div class="preview__photo-container preview__photo-container_round">
         <img class="preview__photo" src="{{ ($image.Resize "328x").RelPermalink }}" alt="{{ .Params.name }}">
     </div>

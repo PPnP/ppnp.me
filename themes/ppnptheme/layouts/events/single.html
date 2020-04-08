@@ -3,7 +3,7 @@
     {{ if .Params.featured_image }}
     {{ $image := .Resources.GetMatch (.Params.featured_image) }}
     {{ if $image }}
-    <img src="{{ ($image.Resize "1000x").RelPermalink }}" class="events__photo" alt="{{ .Title }} photo">
+    <img src="{{ ($image.Resize "1000x").RelPermalink }}" alt="{{ .Title }} photo">
     {{ end }}
     {{ end }}
     <div>
