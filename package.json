@@ -11,6 +11,7 @@
     "eslint-plugin-react": "^7.19.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
+    "gulp-check-unused-css": "^2.1.4",
     "gulp-csso": "^4.0.1",
     "gulp-eslint": "^6.0.0",
     "gulp-html": "^2.0.0",
@@ -20,10 +21,14 @@
     "gulp-rev-delete-original": "^0.2.3",
     "gulp-svgmin": "^2.2.0",
     "gulp-terser": "^1.2.0",
-    "path": "^0.12.7"
+    "gulp-util": "^3.0.8",
+    "gulp-w3c-html-validator": "^2.0.0",
+    "path": "^0.12.7",
+    "simplecrawler": "^1.1.8"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "rm -rf public && hugo && gulp test",
+    "build": "rm -rf public && hugo && gulp"
   },
   "repository": {
     "type": "git",

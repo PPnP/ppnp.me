@@ -1,6 +1,8 @@
 const { src, dest, parallel, series } = require('gulp');
 
 const htmlmin = require("gulp-htmlmin");
+const validator = require('gulp-html');
+const w3c = require('gulp-w3c-html-validator');
 const csso = require("gulp-csso");
 const autoprefixer = require('gulp-autoprefixer');
 const svgmin = require('gulp-svgmin');
@@ -9,6 +11,14 @@ const imagemin = require('gulp-imagemin');
 const RevAll = require("gulp-rev-all");
 const path = require('path');
 const revdel = require('gulp-rev-delete-original');
+const eslint = require('gulp-eslint');
+
+const validateJs = () => {
+    return src(['public/**/*.js', '!public/**/*.min.js'])
+        .pipe(eslint())
+        .pipe(eslint.format())
+        .pipe(eslint.failAfterError());
+}
 
 const html = () => {
     return src('public/**/*.html', { base: "./" })
@@ -27,6 +37,15 @@ const html = () => {
             useShortDoctype: true
         }))
         .pipe(dest('./'))
+}
+
+const validateHtml = () => {
+    return src('public/**/*.html', { base: "./" })
+        .pipe(validator())
+        .pipe(w3c({
+            skipWarnings: true
+        }))
+        .pipe(w3c.reporter())
 }
 
 const revision = () => {
@@ -88,4 +107,8 @@ exports.js = js;
 exports.images = images;
 exports.revision = revision;
 
+exports.validateHtml = validateHtml;
+exports.validateJs = validateJs;
+
 exports.default = series(revision, parallel(html, css, svg, images, js));
+exports.test = parallel(validateHtml, validateJs);
