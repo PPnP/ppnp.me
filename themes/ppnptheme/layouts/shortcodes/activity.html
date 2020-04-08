@@ -18,8 +18,6 @@
     {{- $events := where (where .Site.Pages ".Params.members" "intersect" (slice $member)) "Section" "events" -}}
     {{- range $index, $event := $events -}}
     <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-    {{- if lt (add $index 1) (len $events) -}}
-    ,&nbsp;
-    {{- end -}}
+    {{- if lt (add $index 1) (len $events) -}}, {{ end -}}
     {{- end -}}.
 </p>
