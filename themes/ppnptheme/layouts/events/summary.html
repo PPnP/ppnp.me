@@ -1,14 +1,13 @@
 {{ if .Params.featured_image }}
 {{ $image := .Resources.GetMatch (.Params.featured_image) }}
 {{ if $image }}
-<article class="event">
-    <a href="{{ .RelPermalink }}" class="event__link default-link"></a>
+<a class="event default-link" href="{{ .RelPermalink }}">
     <img class="event__thumbnail" src="{{ ($image.Resize "2000x").RelPermalink  }}" alt="{{ .Title }} event thumbnail">
     <div class="event__info">
         <time class="event__date"
             datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format .Site.Params.dateFormat }}</time>
         <h2>{{ .Title }}</h2>
     </div>
-</article>
+</a>
 {{ end }}
 {{ end }}

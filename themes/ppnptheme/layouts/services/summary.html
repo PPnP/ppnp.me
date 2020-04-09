@@ -2,8 +2,8 @@
     {{ if .Params.featured_image }}
     {{ $image := .Resources.GetMatch (.Params.featured_image) }}
     {{ if $image }}
-    <object type="image/svg+xml" data="{{ $image.RelPermalink }}"
-        class="list-entry__photo list-entry__photo_small"></object>
+    <object type="image/svg+xml" data="{{ $image.RelPermalink }}" class="list-entry__photo list-entry__photo_small"
+        aria-hidden="true"></object>
     {{ end }}
     {{ end }}
     <div class="list-entry__info">

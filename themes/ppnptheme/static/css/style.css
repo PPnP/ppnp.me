@@ -8,8 +8,9 @@
 }
 
 :root {
-    --accent: #2f80ed;
+    --accent: #2975da;
     --dark-accent: #002f6d;
+    --secondary-text: #767676;
     --transition-duration: .15s;
     --width: 1000px;
     --max-width: 90vw;
@@ -97,7 +98,7 @@ button {
 
 input,
 textarea {
-    border: 2px solid #d9d9d9;
+    border: 2px solid #d8d8d8;
     outline: 0;
     width: 100%;
 }
@@ -109,7 +110,7 @@ textarea {
 
 input[type="text"]::placeholder,
 textarea::placeholder {
-    color: #d9d9d9
+    color: var(--secondary-text)
 }
 
 input[type="text"]:focus,
@@ -131,6 +132,15 @@ button:focus {
 /*
     Generic elements styles
 */
+
+.visually-hidden {
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
 
 .default-link {
     color: initial;
@@ -392,15 +402,6 @@ button:focus {
     transition: all var(--transition-duration) ease
 }
 
-.event__link {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    right: 0;
-    z-index: 1
-}
-
 .event__info {
     position: absolute;
     max-width: 90%;
@@ -527,7 +528,7 @@ button:focus {
 }
 
 .preview__text_secondary {
-    color: #8d8d8d
+    color: var(--secondary-text)
 }
 
 .list-previews {
@@ -572,6 +573,7 @@ button:focus {
 
 .list-entry__keyinfo.list-entry__keyinfo {
     margin: .25rem 0 1rem;
+    color: var(--secondary-text)
 }
 
 .list-entry__name {
@@ -645,7 +647,7 @@ button:focus {
     height: 25px;
     width: 25px;
     display: flex;
-    border: 2px solid #d9d9d9;
+    border: 2px solid #d8d8d8;
     border-radius: var(--corners);
     justify-content: center;
     align-items: center;
@@ -822,10 +824,19 @@ button:focus {
     }
 
     .list-entry__photo {
+        margin: 0;
         margin-bottom: 1rem;
         width: 8rem;
         height: 8rem;
         object-fit: cover;
+    }
+
+    .list-entry__photo_small {
+        width: 5rem;
+        height: 5rem;
+    }
+
+    .list-entry__photo_round {
         border-radius: 100%;
     }
 

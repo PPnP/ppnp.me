@@ -7,12 +7,20 @@
                 <p>{{ .Content | plainify }}</p>
             </div>
             <form class="contact-form__form">
-                <input type="text" placeholder="Имя" name="name">
+                <label for="name" class="visually-hidden">Имя</label>
+                <input type="text" placeholder="Имя" name="name" id="name">
+
                 <div class="contact-form__columns">
-                    <input type="text" placeholder="E-mail" name="email">
-                    <input type="text" placeholder="Телефон" name="phone">
+                    <label for="email" class="visually-hidden">E-mail</label>
+                    <input type="text" placeholder="E-mail" name="email" id="email">
+
+                    <label for="phone" class="visually-hidden">Телефон</label>
+                    <input type="text" placeholder="Телефон" name="phone" id="phone">
                 </div>
-                <textarea placeholder="Сообщение" name="message"></textarea>
+
+                <label for="message" class="visually-hidden">Сообщение</label>
+                <textarea placeholder="Сообщение" name="message" id="message"></textarea>
+
                 <label class="checkbox">Я согласен с <a href="/agreement">политикой обработки данных</a>
                     <input type="checkbox" class="checkbox__input" name="agreed">
                     <span class="checkbox__mark"></span>

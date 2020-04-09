@@ -5,14 +5,16 @@
     </a>
     <div class="footer__links">
         <a href="mailto:{{ .Site.Params.email }}" class="footer__link">
-            <svg class="footer__icon">
+            <svg class="footer__icon" aria-hidden="true">
                 <use xlink:href="/images/icons.svg#email"></use>
             </svg>
+            <span class="visually-hidden">Email address</span>
         </a>
         <a href="tel:{{ replaceRE "\\D" "" .Site.Params.phone }}" class="footer__link">
-            <svg class="footer__icon">
+            <svg class="footer__icon" aria-hidden="true">
                 <use xlink:href="/images/icons.svg#phone"></use>
             </svg>
+            <span class="visually-hidden">Phone number</span>
         </a>
     </div>
 </footer>
