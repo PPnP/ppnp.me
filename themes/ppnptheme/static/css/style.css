@@ -570,8 +570,8 @@ button:focus {
     width: 10%
 }
 
-.list-entry__keyinfo {
-    margin-top: -.5rem
+.list-entry__keyinfo.list-entry__keyinfo {
+    margin: .25rem 0 1rem;
 }
 
 .list-entry__name {
@@ -813,7 +813,22 @@ button:focus {
         font-size: 1.1rem
     }
 
-    .list-full,
+    .list-previews {
+        display: none;
+    }
+
+    .list-entry {
+        display: block;
+    }
+
+    .list-entry__photo {
+        margin-bottom: 1rem;
+        width: 8rem;
+        height: 8rem;
+        object-fit: cover;
+        border-radius: 100%;
+    }
+
     .contact-form {
         grid-gap: 2rem
     }
@@ -833,10 +848,6 @@ button:focus {
     .top-menu__contacts {
         margin-top: 2rem
     }
-
-    .list-entry__photo {
-        display: none;
-    }
 }
 
 @media screen and (max-width: 545px) {
@@ -847,11 +858,6 @@ button:focus {
 
     .contact-form__columns {
         grid-template-columns: 1fr;
-    }
-
-    .list-previews {
-        grid-gap: 1.5rem;
-        grid-template-columns: repeat(2, 1fr);
     }
 
     .header__logo,
