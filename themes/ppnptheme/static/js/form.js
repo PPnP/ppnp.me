@@ -1,9 +1,23 @@
 (() => {
     const form = document.querySelector('.contact-form__form');
+
     const submitButton = document.querySelector('.contact-form__submit');
     const submitButtonValue = submitButton.textContent;
 
+    let resetTimer;
+    let resetListener;
+
     const resetButton = () => {
+        if (resetTimer) {
+            clearTimeout(resetTimer);
+            resetTimer = undefined;
+        }
+
+        if (resetListener) {
+            submitButton.removeEventListener('focusout', resetListener);
+            resetListener = undefined;
+        }
+
         submitButton.classList.remove('contact-form__submit_fail');
         submitButton.classList.remove('contact-form__submit_success');
         submitButton.textContent = submitButtonValue;
@@ -27,7 +41,9 @@
             return response.text();
         }).then((html) => {
             submitButton.textContent = html;
-            submitButton.addEventListener('focusout', resetButton, { once: true });
+
+            resetListener = submitButton.addEventListener('focusout', resetButton, { once: true });
+            resetTimer = setTimeout(resetButton, 2000);
         });
     };
 
