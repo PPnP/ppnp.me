@@ -47,7 +47,9 @@
     document.querySelector('.presentation__button-area_next').addEventListener('click', nextPage);
     document.addEventListener('keyup', shortcuts);
 
-    for (let i = 1; i < slides.length; i += 1) {
-        slides[i].style.display = 'none';
-    }
+    window.addEventListener("load", () => {
+        for (let i = 1; i < slides.length; i += 1) {
+            slides[i].style.display = 'none';
+        }
+    });
 })();
