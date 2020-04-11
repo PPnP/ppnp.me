@@ -1,7 +1,7 @@
 {{ if not .IsHome }}
 <footer class="footer wrapper">
     <a href="/">
-        <img src="{{ "images/logo.png" | relURL }}" class="footer__logo" alt="PPnP Team logo">
+        <object type="image/svg+xml" data='/images/logo.svg' class="header__logo" aria-hidden="true"></object>
     </a>
     <div class="footer__links">
         <a href="mailto:{{ .Site.Params.email }}" class="footer__link">

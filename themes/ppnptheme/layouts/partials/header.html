@@ -2,7 +2,7 @@
 	<div class="header__background"></div>
 	<div class="wrapper header__wrapper">
 		{{ if not .IsHome }} <a href="/"> {{ end }}
-			<img src="{{ "images/logo.png" | relURL }}" class="header__logo" alt="PPnP Team logo">
+			<object type="image/svg+xml" data='/images/logo.svg' class="header__logo"></object>
 			{{ if not .IsHome }} </a> {{ end }}
 
 		<button class="hamburger" type="button">
