@@ -7,11 +7,22 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="yandex-verification" content="c791c1b9cbcaaf12" />
 
-	{{ $title := (printf "%s" .Site.Title) }}
+	{{ $description := .Description }}
+	{{ if .IsHome }}
+	{{ $description = .Site.Params.indexText }}
+	{{ else if or (eq .Kind "section") (eq .Kind "taxonomyTerm") (eq .Type "contact") }}
+	{{ $description = .Content }}
+	{{ end }}
+	{{ if and $description (lt (countrunes $description) 150) }}
+	<meta name="description" content="{{ $description }}" />
+	{{ end }}
+
+	{{ $title := .Site.Title }}
 	{{ if (not .IsHome) }}
 	{{ $title = (printf "%s | %s" .Title .Site.Title) }}
 	{{ end }}
 	<title>{{ $title }}</title>
+	<meta property="og:title" content="{{ $title }}" />
 
 	<link rel="stylesheet" href="{{ "css/reset.css" | relURL }}">
 	<link rel="stylesheet" href="{{ "css/fonts.css" | relURL }}">
