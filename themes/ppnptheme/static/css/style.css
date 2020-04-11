@@ -209,7 +209,8 @@ button:focus {
 }
 
 .header__logo {
-    height: 3rem
+    height: 2.75rem;
+    pointer-events: none;
 }
 
 /*
@@ -758,7 +759,8 @@ button:focus {
 }
 
 .footer__logo {
-    height: 3rem
+    height: 2.75rem;
+    pointer-events: none;
 }
 
 .footer__links {
@@ -873,7 +875,7 @@ button:focus {
 
     .header__logo,
     .footer__logo {
-        height: 2.5rem
+        height: 2.25rem
     }
 
     .footer__link {
