@@ -64,7 +64,7 @@ if (!$agreed) {
     error("Не дано соглашение на обработку данных");
 }
 
-$to = "ppnpteam@gmail.com";
+$to = "info@ppnp.me";
 $subject = 'Заявка с сайта';
 $from = $name . ' <' . $email . '>';
  

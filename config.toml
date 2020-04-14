@@ -13,9 +13,9 @@ ignoreFiles = ["README.md", "LICENSE.md", "TODO.md"] # don't render github relat
 
 [params]
     dateFormat = "02.01.2006"
-    phone = "+7 (977) 782-58-49"
     indexText = "Команда со странным названием, которая делает красиво. Мы PPnP."
-    email = "ppnpteam@gmail.com" # also change in content/contact/handler.php, content/agreement
+    phone = "+7 (977) 782-58-49"
+    email = "info@ppnp.me" # also change in content/contact/handler.php, content/agreement
 
 [taxonomies]
   members = "members"
