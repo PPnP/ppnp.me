@@ -1,0 +1,18 @@
+{{ define "main" }}
+<section class="wrapper hero">
+    <p>404</p>
+    <h1 class="hero__title hero__title_narrow">Страница не существует</h1>
+</section>
+<main class="content">
+    <div class="wrapper content__wrapper">
+        <p>
+            Страница, которую Вы пытаетесь открыть, не существует. Возможно она была удалена, перенесена на новый адрес
+            или никогда не существовала.
+        </p>
+        <p>
+            Еще раз проверьте адрес страницы на наличие опечаток. Если Вы уверены, что это мы где-то ошиблись, напишите,
+            пожалуйста, письмо на <a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a>.
+        </p>
+    </div>
+</main>
+{{ end }}
