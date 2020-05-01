@@ -10,6 +10,20 @@
         <p>{{ .Date.Format .Site.Params.dateFormat }}</p>
         <h1 class="hero__title">{{ .Title }}</h1>
         <p>{{ .Params.description }}</p>
+        <br>
+        {{ if .Params.members }}
+        <strong>Участники:</strong>
+        <ul>
+            {{- range $index, $taxonomy := .Page.Params.members -}}
+            {{- with $.Site.GetPage (printf "members/%s" $taxonomy) -}}
+            <li>
+                <a href="/members#{{ $taxonomy }}" class="contrast-link">{{ .Params.Name }}
+                    ({{ .Params.role }})</a>
+            </li>
+            {{- end -}}
+            {{- end -}}
+        </ul>
+        {{ end }}
     </div>
 </section>
 <main class="content">

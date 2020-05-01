@@ -165,6 +165,15 @@ button:focus {
     transform: rotate(180deg)
 }
 
+.contrast-link {
+    color: #fff;
+    border-bottom: 1px solid transparent;
+}
+
+.contrast-link:hover {
+    border-bottom-color: #fff;
+}
+
 /*
     Header styles
 */
