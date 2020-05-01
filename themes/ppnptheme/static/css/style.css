@@ -702,6 +702,7 @@ button:focus {
     left: 0;
     bottom: 0;
     transform: scaleX(0);
+    mix-blend-mode: exclusion;
     transition: transform var(--transition-duration) linear;
     transform-origin: left
 }
