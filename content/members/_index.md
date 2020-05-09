@@ -1,5 +1,5 @@
 ---
-title: Наша команда
+title: О нас
 description: О нас
 ---
 

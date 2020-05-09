@@ -11,6 +11,7 @@ const RevAll = require("gulp-rev-all");
 const path = require('path');
 const revdel = require('gulp-rev-delete-original');
 const eslint = require('gulp-eslint');
+const minifyInlineJSON = require('gulp-minify-inline-json');
 
 const validateJs = () => {
     return src(['public/**/*.js', '!public/**/*.min.js'])
@@ -21,6 +22,7 @@ const validateJs = () => {
 
 const html = () => {
     return src('public/**/*.html', { base: "./" })
+        .pipe(minifyInlineJSON())
         .pipe(htmlmin({
             collapseWhitespace: true,
             collapseBooleanAttributes: true,
@@ -56,7 +58,8 @@ const revision = () => {
         .pipe(RevAll.revision({
             dontRenameFile: ignore,
             dontUpdateReference: ignore,
-            transformFilename: (file, hash) => hash.substr(0, 8) + path.extname(file.path)
+            transformFilename: (file, hash) => hash.substr(0, 8) + path.extname(file.path),
+            prefix: "https://ppnp.me/"
         }))
         .pipe(revdel())
         .pipe(dest("public"));

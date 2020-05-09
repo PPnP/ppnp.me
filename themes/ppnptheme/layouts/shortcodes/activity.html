@@ -5,7 +5,7 @@
     {{- range $index, $taxonomy := .Page.Params.services -}}
     {{- with $.Site.GetPage (printf "services/%s" $taxonomy) -}}
     {{- if gt $index 0 }}, {{ end -}}
-    <a href="/services#{{ $taxonomy }}">{{ .Title }}</a>
+    <a href="/services#{{ $taxonomy }}" title="{{ .Title }}">{{ .Title }}</a>
     {{- end -}}
     {{- end -}}.
 
@@ -17,7 +17,7 @@
     {{- $member := .Page.Data.Term -}}
     {{- $events := where (where .Site.Pages ".Params.members" "intersect" (slice $member)) "Section" "events" -}}
     {{- range $index, $event := $events -}}
-    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    <a href="{{ .RelPermalink }}" title="{{ .Title }}">{{ .Title }}</a>
     {{- if lt (add $index 1) (len $events) -}}, {{ end -}}
     {{- end -}}.
 </p>

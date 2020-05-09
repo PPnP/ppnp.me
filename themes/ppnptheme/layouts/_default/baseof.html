@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="yandex-verification" content="c791c1b9cbcaaf12" />
+	<link rel="canonical" href={{ .Permalink }} />
 
 	{{ $description := .Description }}
 	{{ if .IsHome }}
@@ -15,6 +16,18 @@
 	{{ end }}
 	{{ if and $description (lt (countrunes $description) 150) }}
 	<meta name="description" content="{{ $description }}" />
+	<meta property="og:description" content="{{ $description }}" />
+	<meta name="twitter:description" content="{{ $description }}" />
+	{{ end }}
+
+	<meta name="robots" content="index,follow" />
+	<meta name="googlebot" content="index,follow" />
+
+	<meta property="og:url" content={{ .Permalink }} />
+	<meta property="og:site_name" content="{{ .Site.Title }}" />
+
+	{{ if isset .Params "date" }}
+	<meta property="article:published_time" content="{{ time .Date }}" />
 	{{ end }}
 
 	{{ $title := .Site.Title }}
@@ -22,7 +35,23 @@
 	{{ $title = (printf "%s | %s" .Title .Site.Title) }}
 	{{ end }}
 	<title>{{ $title }}</title>
+	<meta name="twitter:title" content="{{ $title }}" />
 	<meta property="og:title" content="{{ $title }}" />
+	<meta property="og:locale" content="ru_RU" />
+	<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
+
+	{{ if .Params.featured_image }}
+	{{ $image := .Resources.GetMatch (.Params.featured_image) }}
+	{{ if $image }}
+	<meta property="og:image" content="{{ $image.RelPermalink }}" />
+	<meta name="twitter:image" content="{{ $image.RelPermalink }}" />
+	{{ end }}
+	{{ else }}
+	<meta property="og:image" content="/images/background.png" />
+	<meta name="twitter:image" content="/images/background.png" />
+	{{ end }}
+
+	<meta name="twitter:card" content="summary">
 
 	<link rel="stylesheet" href="{{ "css/reset.css" | relURL }}">
 	<link rel="stylesheet" href="{{ "css/fonts.css" | relURL }}">

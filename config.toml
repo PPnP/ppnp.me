@@ -1,6 +1,6 @@
 baseURL = "https://ppnp.me/"
 languageCode = "ru"
-title = "PPnP Team"
+title = "Команда PPnP"
 theme = "ppnptheme"
 
 disableKinds = ["RSS"]

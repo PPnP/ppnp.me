@@ -17,7 +17,7 @@
             {{- range $index, $taxonomy := .Page.Params.members -}}
             {{- with $.Site.GetPage (printf "members/%s" $taxonomy) -}}
             <li>
-                <a href="/members#{{ $taxonomy }}" class="contrast-link">{{ .Params.Name }}
+                <a href="/members#{{ $taxonomy }}" class="contrast-link" title="{{ .Params.name }}">{{ .Params.Name }}
                     ({{ .Params.role }})</a>
             </li>
             {{- end -}}
@@ -26,10 +26,50 @@
         {{ end }}
     </div>
 </section>
+
 <main class="content">
     <div class="wrapper content__wrapper">
         {{ .Content }}
-
     </div>
 </main>
+
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "headline": {{ .Title }},
+    "datePublished": "{{ .Date.Format "2006-01-02" }}",
+    "description": {{ .Description }},
+    "wordCount": {{ .WordCount }},
+    "mainEntityOfPage": "True",
+    "dateModified": "{{ .Lastmod.Format "2006-01-02" }}",
+
+    {{ if .Params.featured_image }}
+    {{ $image := .Resources.GetMatch (.Params.featured_image) }}
+    {{ if $image }}
+    "image": {
+        "@type": "imageObject",
+        "url": {{ $image.RelPermalink }}
+    },
+    {{ end }}
+    {{ end }}
+
+    "author": {
+        "@type": "Organization",
+        "name": "{{ .Site.Title }}",
+        "logo": {
+            "@type": "imageObject",
+            "url": {{ "/images/logo.png" | relURL }}
+        }
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "{{ .Site.Title }}",
+        "logo": {
+            "@type": "imageObject",
+            "url": {{ "/images/logo.png" | relURL }}
+        }
+    }
+}
+</script>
 {{ end }}

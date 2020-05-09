@@ -2,7 +2,7 @@
 <section class="introduction hero wrapper">
   <h1 class="introduction__heading">{{ .Site.Params.indexText }}</h1>
   <h4>
-    <a class="introduction__about-us" href="/members/">
+    <a class="introduction__about-us" href="/members/" title="О нас">
       Совсем немного о нас
       <svg class="introduction__arrow">
         <use xlink:href="/images/icons.svg#arrow-right"></use>
@@ -19,4 +19,13 @@
   {{ end }}
 </main>
 
+<script defer type="application/ld+json">
+{ 
+  "@context": "http://schema.org", 
+  "@type": "Organization", 
+  "url": {{ .Site.Home.Permalink }}, 
+  "name": "{{ .Site.Title }}", 
+  "logo": {{ "/images/logo.png" | absURL }}
+}
+</script>
 {{ end }}

@@ -8,7 +8,8 @@
         {{ if .Params.photo }}
         {{ $image := .Resources.GetMatch (.Params.photo) }}
         {{ if $image }}
-        <img class="list-entry__photo" src="{{ ($image.Resize "600x").RelPermalink }}" alt="{{ .Params.name }}">
+        <img class="list-entry__photo list-entry__photo_round" src="{{ ($image.Resize "600x").RelPermalink }}"
+            alt="{{ .Params.name }}">
         {{ end }}
         {{ end }}
 

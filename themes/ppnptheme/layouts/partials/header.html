@@ -28,7 +28,8 @@
 					<svg class="top-menu__icon">
 						<use xlink:href="/images/icons.svg#email"></use>
 					</svg>
-					<a href="mailto:{{ .Site.Params.email }}" class="top-menu__link top-menu__link_contact">
+					<a href="mailto:{{ .Site.Params.email }}" class="top-menu__link top-menu__link_contact"
+						title="Email">
 						{{ .Site.Params.email }}
 					</a>
 				</p>
@@ -37,7 +38,7 @@
 						<use xlink:href="/images/icons.svg#phone"></use>
 					</svg>
 					<a href="tel:{{ replaceRE "\\D" "" .Site.Params.phone }}"
-						class="top-menu__link top-menu__link_contact">
+						class="top-menu__link top-menu__link_contact" title="Телефон">
 						{{ .Site.Params.phone }}
 					</a>
 				</p>

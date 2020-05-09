@@ -4,13 +4,13 @@
         <object type="image/svg+xml" data='/images/logo.svg' class="header__logo" aria-hidden="true"></object>
     </a>
     <div class="footer__links">
-        <a href="mailto:{{ .Site.Params.email }}" class="footer__link">
+        <a href="mailto:{{ .Site.Params.email }}" class="footer__link" title="Email">
             <svg class="footer__icon" aria-hidden="true">
                 <use xlink:href="/images/icons.svg#email"></use>
             </svg>
             <span class="visually-hidden">Email address</span>
         </a>
-        <a href="tel:{{ replaceRE "\\D" "" .Site.Params.phone }}" class="footer__link">
+        <a href="tel:{{ replaceRE "\\D" "" .Site.Params.phone }}" class="footer__link" title="Телефон">
             <svg class="footer__icon" aria-hidden="true">
                 <use xlink:href="/images/icons.svg#phone"></use>
             </svg>

@@ -3,6 +3,7 @@
 	<p>{{ .Description }}</p>
 	<h1 class="hero__title hero__title_narrow">{{ .Content | plainify }}</h1>
 </section>
+
 <main class="content">
 	<div class="wrapper content__wrapper">
 		<h2>{{ .Title }}</h2>
@@ -19,4 +20,64 @@
 		</div>
 	</div>
 </main>
+
+{{ if eq .Type "members"}}
+<script type="application/ld+json">
+{
+	"@context": "http://schema.org",
+	"@type": "Organization",
+	"url": {{ .Site.Home.Permalink }}, 
+    "name": "{{ .Site.Title }}", 
+    "logo": {{ "/images/logo.png" | relURL }},
+	"employee": [
+		{{ range $index, $person := .Pages }}
+	  	{{- if gt $index 0 }}, {{ end -}}
+		{
+			"@type": "Person",
+
+		  	{{ if $person.Params.photo }}
+    		{{ $image := .Resources.GetMatch (.Params.photo) }}
+    		{{ if $image }}
+		  	"image": {{ $image.RelPermalink }},
+		  	{{ end }}
+			{{ end }}
+			  
+		  	"jobTitle": {{ $person.Params.role }},
+		  	"name": {{ $person.Params.name }}
+		}
+		{{ end }}
+	]
+}
+</script>
+{{ else if eq .Type "services" }}
+<script type="application/ld+json">
+{
+	"@context": "http://schema.org/",
+	"@type": "Service",
+	"serviceType": "IT",
+	"provider": {
+		"@type": "Organization", 
+		"url": {{ .Site.Home.Permalink }}, 
+		"name": "{{ .Site.Title }}", 
+		"logo": {{ "/images/logo.png" | relURL }}
+	},
+	"hasOfferCatalog": {
+		"@type": "OfferCatalog",
+		"name": "IT Services",
+		"itemListElement": [
+			{{ range $index, $service := .Pages }}
+			{{- if gt $index 0 }}, {{ end -}}
+			{
+				"@type": "Offer",
+				"itemOffered": {
+					"@type": "Service",
+					"name": "{{ $service.Title }}"
+				}
+			}
+			{{ end }}
+		]
+	}
+}
+</script>
+{{ end }}
 {{ end }}

@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /services/$
+Disallow: /services/*
+Disallow: /agreement/
+Sitemap: https://ppnp.me/sitemap.xml
