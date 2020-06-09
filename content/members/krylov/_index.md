@@ -22,6 +22,9 @@ IBM Academic Qualification (2018)
 Защита проекта «Верификация школьных аттестатов на базе блокчейна Ethereum» (2018)
 
 <strong class="accent">Успехи</strong>  
+Хакатон  VirusHack (2020)  
+Победа, 2 место
+
 Хакатон  SMZHack (2020)  
 Победа, 2 место
 
