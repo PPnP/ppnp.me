@@ -4,7 +4,12 @@ event_type: Хакатон
 date: 2020-05-05
 featured_image: featured.jpg
 description: Хакатон от Ростелекома по устройству жизни через технологии возможностей для человека, бизнеса и государства в условиях глобальных изменений.
-members: [krylov, denisov, kravtsov, kozlov]
+members: 
+    - slug: krylov
+    - slug: denisov
+    - slug: kravtsov
+    - slug: kozlov
+      role: Backend
 ---
 
 # Результат

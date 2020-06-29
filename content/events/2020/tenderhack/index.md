@@ -4,7 +4,11 @@ event_type: Хакатон
 date: 2020-01-26
 featured_image: featured.jpg
 description: Хакатон от Портала поставщиков по улучшению платформы.
-members: [kottsov, krylov, denisov, kravtsov]
+members: 
+    - slug: kottsov
+    - slug: krylov
+    - slug: denisov
+    - slug: kravtsov
 ---
 
 # Кейс

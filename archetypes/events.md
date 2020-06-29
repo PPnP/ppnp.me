@@ -6,8 +6,11 @@ featured_image: featured.jpg
 description: Lorem ipsum dolor sit amet
 draft: True # для публикации убрать эту строку
 
-# участники события (в следующем виде: [krylov, denisov]). 
-# должно совпадать с именами папок в members
+# участники события в следующем виде: 
+#   - slug: kravtsov
+#     role: Designer (если необходимо переопределить стандартную роль)
+#  
+# (!) slug должен совпадать с именем папки в members
 members: []
 ---
 

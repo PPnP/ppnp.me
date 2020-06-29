@@ -15,10 +15,14 @@
         <strong>Участники:</strong>
         <ul>
             {{- range $index, $taxonomy := .Page.Params.members -}}
-            {{- with $.Site.GetPage (printf "members/%s" $taxonomy) -}}
+            {{- with $.Site.GetPage (printf "members/%s" $taxonomy.slug) -}}
+            {{- $role := .Params.role -}}
+            {{- if $taxonomy.role -}}
+            {{- $role = $taxonomy.role -}}
+            {{- end -}}
             <li>
                 <a href="/members#{{ $taxonomy }}" class="contrast-link" title="{{ .Params.name }}">{{ .Params.Name }}
-                    ({{ .Params.role }})</a>
+                    ({{ $role }})</a>
             </li>
             {{- end -}}
             {{- end -}}

@@ -4,7 +4,12 @@ event_type: Хакатон
 date: 2019-11-30
 featured_image: featured.jpg
 description: Хакатон от Changellenge, нацеленный на профессиональное развитие участников.
-members: [krylov, kottsov, kozlov, denisov, kravtsov]
+members: 
+    - slug: krylov
+    - slug: kottsov
+    - slug: kozlov
+    - slug: denisov
+    - slug: kravtsov
 ---
 
 # Результат

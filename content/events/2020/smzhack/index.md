@@ -4,7 +4,13 @@ event_type: Хакатон
 date: 2020-04-26
 featured_image: featured.jpg
 description: Хакатон от ФНС и Wallet One по созданию сервисов для самозанятых.
-members: [kottsov, krylov, denisov, kravtsov, kozlov]
+members: 
+    - slug: kottsov
+    - slug: krylov
+    - slug: denisov
+    - slug: kravtsov
+    - slug: kozlov
+      role: Backend
 ---
 
 # Результат
