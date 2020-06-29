@@ -8,16 +8,4 @@
     <a href="/services#{{ $taxonomy }}" title="{{ .Title }}">{{ .Title }}</a>
     {{- end -}}
     {{- end -}}.
-
-    <br>
-
-    <!-- Показывает события, в которых участвовал человек -->
-
-    Хакатоны с PPnP:&nbsp;
-    {{- $member := .Page.Data.Term -}}
-    {{- $events := where (where .Site.Pages ".Params.members" "intersect" (slice $member)) "Section" "events" -}}
-    {{- range $index, $event := $events -}}
-    <a href="{{ .RelPermalink }}" title="{{ .Title }}">{{ .Title }}</a>
-    {{- if lt (add $index 1) (len $events) -}}, {{ end -}}
-    {{- end -}}.
 </p>
