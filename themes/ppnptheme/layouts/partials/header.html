@@ -1,8 +1,9 @@
 <header class="header">
 	<div class="header__background"></div>
 	<div class="wrapper header__wrapper">
-		{{ if not .IsHome }} <a href="/"> {{ end }}
-			<object type="image/svg+xml" data='/images/logo.svg' class="header__logo"></object>
+		{{ if not .IsHome }} <a href="/" aria-label="Главная страница"> {{ end }}
+			<object type="image/svg+xml" data='/images/logo.svg' class="header__logo"
+				alt="Логотип команды PPnP.me"></object>
 			{{ if not .IsHome }} </a> {{ end }}
 
 		<button class="hamburger" type="button">

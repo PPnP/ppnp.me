@@ -1,20 +1,21 @@
 {{ if not .IsHome }}
 <footer class="footer wrapper">
-    <a href="/">
-        <object type="image/svg+xml" data='/images/logo.svg' class="header__logo" aria-hidden="true"></object>
+    <a href="/" aria-label="Главная страница">
+        <object type="image/svg+xml" data='/images/logo.svg' class="header__logo"
+            alt="Логотип команды PPnP.me"></object>
     </a>
     <div class="footer__links">
         <a href="mailto:{{ .Site.Params.email }}" class="footer__link" title="Email">
             <svg class="footer__icon" aria-hidden="true">
                 <use xlink:href="/images/icons.svg#email"></use>
             </svg>
-            <span class="visually-hidden">Email address</span>
+            <span class="visually-hidden">Адрес электронной почты</span>
         </a>
         <a href="tel:{{ replaceRE "\\D" "" .Site.Params.phone }}" class="footer__link" title="Телефон">
             <svg class="footer__icon" aria-hidden="true">
                 <use xlink:href="/images/icons.svg#phone"></use>
             </svg>
-            <span class="visually-hidden">Phone number</span>
+            <span class="visually-hidden">Номер телефона</span>
         </a>
     </div>
 </footer>
