@@ -70,6 +70,10 @@
 	{{ partial "header" . }}
 	{{ block "main" . }}{{ end }}
 	{{ partial "footer" . }}
+
+	<noscript>
+		<link rel="stylesheet" href="{{ "css/noscript.css" | relURL }}">
+	</noscript>
 </body>
 
 </html>

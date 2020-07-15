@@ -1,0 +1,23 @@
+.top-menu {
+    display: grid;
+    opacity: 1;
+    pointer-events: all;
+}
+
+.header__background {
+    transform: none;
+}
+
+.header {
+    margin-bottom: 4rem;
+}
+
+.hamburger,
+.presentation__button,
+.presentation__button-area {
+    display: none;
+}
+
+.presentation__footer {
+    justify-content: flex-start;
+}
