@@ -37,19 +37,19 @@
 	<title>{{ $title }}</title>
 	<meta name="twitter:title" content="{{ $title }}" />
 	<meta property="og:title" content="{{ $title }}" />
+
 	<meta property="og:locale" content="ru_RU" />
 	<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
 
+	{{ $og_image := "/images/background.png" }}
 	{{ if .Params.featured_image }}
 	{{ $image := .Resources.GetMatch (.Params.featured_image) }}
 	{{ if $image }}
-	<meta property="og:image" content="{{ $image.RelPermalink }}" />
-	<meta name="twitter:image" content="{{ $image.RelPermalink }}" />
+	{{ $og_image = $image.RelPermalink }}
 	{{ end }}
-	{{ else }}
-	<meta property="og:image" content="/images/background.png" />
-	<meta name="twitter:image" content="/images/background.png" />
 	{{ end }}
+	<meta property="og:image" content="{{ og_image }}" />
+	<meta name="twitter:image" content="{{ og_image }}" />
 
 	<meta name="twitter:card" content="summary">
 
