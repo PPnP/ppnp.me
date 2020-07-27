@@ -15,7 +15,7 @@ jobs:
 
       - name: Setup Hugo
         run: | 
-          wget -O hugo.deb $(curl -s https://api.github.com/repos/gohugoio/hugo/releases/latest | grep -oP '"browser_download_url": "\K(.*)hugo(.*)Linux-64bit.deb')
+          wget -O hugo.deb https://github.com/gohugoio/hugo/releases/download/v0.72.0/hugo_0.72.0_Linux-64bit.deb
           sudo dpkg -i hugo.deb
           rm hugo.deb   
           
