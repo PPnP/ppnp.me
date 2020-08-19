@@ -219,6 +219,7 @@ button:focus {
 
 .header__logo {
     height: 2.75rem;
+    overflow: hidden;
     pointer-events: none;
 }
 
