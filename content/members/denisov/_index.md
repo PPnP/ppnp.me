@@ -23,6 +23,9 @@ Debate Chamber Computer Science Summer School, Лондон (2019)
 Защита проекта «Разработка Learning Management System в формате чат-бота для Лицея НИУ ВШЭ» (2018)
 
 <strong class="accent">Успехи</strong>  
+Хакатон  SberCode (2020)  
+Победа, 1 место, трек Sber ID
+
 Хакатон  VirusHack (2020)  
 Победа, 2 место
 
