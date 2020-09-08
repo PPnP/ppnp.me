@@ -8,6 +8,7 @@ members:
     - slug: krylov
     - slug: denisov
     - slug: kravtsov
+    - slug: kottsov
     - slug: kozlov
       role: Backend
 ---

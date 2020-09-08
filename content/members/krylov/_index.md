@@ -22,6 +22,9 @@ IBM Academic Qualification (2018)
 Защита проекта «Верификация школьных аттестатов на базе блокчейна Ethereum» (2018)
 
 <strong class="accent">Успехи</strong>  
+AMC Makeathon (2020)  
+Победа, 1 место
+
 Хакатон  SberCode (2020)  
 Победа, 1 место, трек Sber ID
 
