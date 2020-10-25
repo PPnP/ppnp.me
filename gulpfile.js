@@ -30,7 +30,6 @@ const html = () => {
             minifyJS: true,
             minifyCSS: true,
             minifyURLs: true,
-            removeAttributeQuotes: true,
             removeComments: true,
             removeEmptyAttributes: true,
             removeOptionalTags: true,
