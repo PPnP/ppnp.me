@@ -32,7 +32,6 @@ const html = () => {
             minifyURLs: true,
             removeComments: true,
             removeEmptyAttributes: true,
-            removeOptionalTags: true,
             removeScriptTypeAttributes: true,
             useShortDoctype: true
         }))
