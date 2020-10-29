@@ -2,10 +2,10 @@
 
 > Official PPnP team website
 >
-> [![](https://img.shields.io/badge/backend-Stepan%20Denisov-lightblue)](https://vk.com/sd.denisoff 'VK profile')
+> [![](https://img.shields.io/badge/backend-Stepan%20Denisov-lightblue)](https://t.me/sd_denisoff 'Telegram')
 > [![](https://img.shields.io/badge/frontend-Matvey%20Kottsov-orange)](https://vk.com/kottsovcom 'VK profile')
 > [![](https://img.shields.io/badge/DS%26ML-Denis%20Kozlov-blue)](https://vk.com/dkozl 'VK profile')
-> [![](https://img.shields.io/badge/UX%2FUI-Leonid%20Kravtsov-green)](https://vk.com/kravtsovjr 'VK profile')
+> [![](https://img.shields.io/badge/UX%2FUI-Leonid%20Kravtsov-green)](https://vk.com/leokravtsov 'VK profile')
 > [![](https://img.shields.io/badge/PM%26BA-Pavel%20Krylov-lightgrey)](https://vk.com/pkryloff 'VK profile')
 
 ## Инструкция по загрузке сайта на хостинг
